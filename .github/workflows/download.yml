@@ -1,1 +1,37 @@
-1
+name: Download Magnet Link
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up aria2
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y aria2
+
+      - name: Download file from magnet link
+        run: |
+          # Replace the magnet link below with your own
+          mkdir -p downloads
+          cd downloads
+          aria2c 'magnet:?xt=urn:btih:a75006eb7c1881234c52e1496e5e33d6d5adc776'
+
+      - name: List downloaded files
+        run: |
+          ls -alh downloads/
+
+      - name: Upload download as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: downloaded-files
+          path: downloads/
+

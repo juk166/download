@@ -23,7 +23,7 @@ jobs:
           # Replace the magnet link below with your own
           mkdir -p downloads
           cd downloads
-          wget -c -O '极致反差美女阿朱在网吧.zip' -t 20 'https://abra--7537ca20.api.brilliant-bittern.buzz/a75006eb7c1881234c52e1496e5e33d6d5adc776/%E6%9E%81%E8%87%B4%E5%8F%8D%E5%B7%AE%E7%BE%8E%E5%A5%B3%E9%98%BF%E6%9C%B1%E5%9C%A8%E7%BD%91%E5%90%A7.zip?user-id=37d52f4e0d316a18715d8a622c8d1f07&download=true&download-id=a5a4082025352a5f88bfa464699811da&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2VudCI6Ik1vemlsbGEvNS4wIChMaW51eDsgQW5kcm9pZCAxMDsgSykgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzEyNC4wLjAuMCBNb2JpbGUgU2FmYXJpLzUzNy4zNiIsInJlbW90ZUFkZHJlc3MiOiIxNjkuMTUwLjE5Ni4xMTkiLCJkb21haW4iOiJ3ZWJ0b3IuaW8iLCJleHAiOjE3MjMxOTg1MDEsInNlc3Npb25JRCI6IlFQU0wtaWFzM3ZJem1XX0VrREJBZmRXLTNvUVF4dW9IIiwicmF0ZSI6IjEwTSIsInJvbGUiOiJub2JvZHkifQ.npWyYlPPUMWFvskHlt-LKjP12bmeaS1fv1aN7J1LpyQ&api-key=8acbcf1e-732c-4574-a3bf-27e6a85b86f1'
+          aria2c 'magnet:?xt=urn:btih:a75006eb7c1881234c52e1496e5e33d6d5adc776'
 
       - name: List downloaded files
         run: |
